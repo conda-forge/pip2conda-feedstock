@@ -26,6 +26,7 @@ requirements:
     - grayskull >=1.0.0
     - python >=3.8
     - requests
+    - ruamel.yaml
     - setuptools
     - tomli
 
