@@ -1,5 +1,5 @@
 {% set name = "pip2conda" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pip2conda-{{ version }}.tar.gz
-  sha256: 8b5f27916d264fc6582780daa75ef20ddd13f782028bf8778558a6765983d576
+  sha256: 2ab8e41ab7a275b8f18cdbe2c4f42b2068d1067801d30c053145f9a346f008e0
 
 build:
   entry_points:
@@ -19,16 +19,16 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
-    - setuptools
-    - setuptools-scm
+    - python >=3.10
+    - setuptools >=61.0
+    - setuptools-scm >=3.4.3
   run:
+    - build
     - grayskull >=1.0.0
-    - python >=3.8
+    - python >=3.10
     - requests
     - ruamel.yaml
-    - setuptools
-    - tomli
+    - packaging
 
 test:
   requires:
@@ -36,7 +36,8 @@ test:
     - pytest
   commands:
     # check metadata
-    - python -m pip check
+    - python -m pip check pip2conda
+    - python -m pip show pip2conda
     # run test suite
     - python -m pytest -ra -v --pyargs pip2conda.tests -k "not real"
     # test entry point
@@ -54,11 +55,11 @@ about:
     `pip2conda` is a tool to translate `pip`-style requirements into `conda`
     requirements.
 
-    `pip2conda` parses build requirements from ``pyproject.toml`` files, then
-    runtime and extra requirements from ``setup.cfg``, including unpackging
-    extras and evaluating environment markers, before matching translating
-    each requirement into a conda-forge requirement suitable for installation
-    with `conda/mamba`.
+    `pip2conda2` uses [`build`](https://github.com/pypa/build) to generate
+    the metadata for a project, and then parses out the build and
+    runtime requirements for the project - including unpackging extras and
+    evaluating environment markers - before matching translating each requirement
+    into a conda-forge requirement suitable for installation with `conda/mamba`.
 
 extra:
   recipe-maintainers:

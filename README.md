@@ -16,11 +16,11 @@ Documentation: https://pip2conda.readthedocs.io/
 `pip2conda` is a tool to translate `pip`-style requirements into `conda`
 requirements.
 
-`pip2conda` parses build requirements from ``pyproject.toml`` files, then
-runtime and extra requirements from ``setup.cfg``, including unpackging
-extras and evaluating environment markers, before matching translating
-each requirement into a conda-forge requirement suitable for installation
-with `conda/mamba`.
+`pip2conda2` uses [`build`](https://github.com/pypa/build) to generate
+the metadata for a project, and then parses out the build and
+runtime requirements for the project - including unpackging extras and
+evaluating environment markers - before matching translating each requirement
+into a conda-forge requirement suitable for installation with `conda/mamba`.
 
 
 Current build status
