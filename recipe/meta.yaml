@@ -13,7 +13,7 @@ build:
   entry_points:
     - pip2conda = pip2conda.pip2conda:main
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -23,7 +23,7 @@ requirements:
     - setuptools >=61.0
     - setuptools-scm >=3.4.3
   run:
-    - build
+    - python-build
     - grayskull >=1.0.0
     - python >=3.10
     - requests
