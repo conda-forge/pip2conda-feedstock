@@ -1,5 +1,5 @@
 {% set name = "pip2conda" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pip2conda-{{ version }}.tar.gz
-  sha256: 2ab8e41ab7a275b8f18cdbe2c4f42b2068d1067801d30c053145f9a346f008e0
+  sha256: edd07bf3d34cf70fa22b550f82c664433c54ec35e2e173a2d0d78bc86398b932
 
 build:
   entry_points:
     - pip2conda = pip2conda.pip2conda:main
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
