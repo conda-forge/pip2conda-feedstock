@@ -1,5 +1,5 @@
 {% set name = "pip2conda" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pip2conda-{{ version }}.tar.gz
-  sha256: 435d2c00408212bb9edf04e0bc1dc4fc340a0fc67e5de15c13adba177699f68b
+  sha256: bd2478db48e4b5f92fd7171f25fda54d7b592bb70bca6611e5de0f0ac1c74b81
 
 build:
   entry_points:
@@ -26,7 +26,7 @@ requirements:
     - grayskull >=1.0.0
     - packaging
     - python >=3.10
-    - python-build
+    - python-build >=1.0.0
     - requests
     - ruamel.yaml
     - wheel
