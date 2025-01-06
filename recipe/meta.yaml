@@ -1,5 +1,5 @@
 {% set name = "pip2conda" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 {% set python_min = "3.10" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 858ca96f66fb2eb5bd393aa5d73d07973ad2081aa64d4fe1035f7a924c3b8465
+  sha256: 71587af42ec750b4ceab6213237a6b65d4adc7d6c425add57fb9f67566c653d6
 
 build:
   entry_points:
