@@ -3,13 +3,13 @@ About pip2conda-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pip2conda-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/duncanmmacleod/pip2conda/
+Home: https://gitlab.com/gwpy/pip2conda/
 
 Package license: GPL-3.0-or-later
 
 Summary: Translate pip requirements into conda requirements
 
-Development: https://github.com/duncanmmacleod/pip2conda.git
+Development: https://gitlab.com/gwpy/pip2conda.git
 
 Documentation: https://pip2conda.readthedocs.io/
 
