@@ -27,13 +27,13 @@ requirements:
     - setuptools >=61.0
     - setuptools-scm >=3.4.3
   run:
-    - grayskull >=1.0.0
+    - grayskull >=2.9.2
     - packaging >=25.0
     - python >=${{ python_min }}
     - python-build >=1.0.0
     - requests >=2.32.5
     - ruamel.yaml >=0.18.15
-    - wheel >=0.45.1
+    - wheel >=0.46.2
 
 tests:
   - requirements:
