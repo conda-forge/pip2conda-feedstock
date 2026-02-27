@@ -22,7 +22,6 @@ runtime requirements for the project - including unpackging extras and
 evaluating environment markers - before matching translating each requirement
 into a conda-forge requirement suitable for installation with `conda/mamba`.
 
-
 Current build status
 ====================
 
