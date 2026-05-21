@@ -14,7 +14,7 @@ source:
   sha256: ab15e3c8c075e480bb327089ff72a69d15802d2195c608d4a646d0b17166e6e1
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
@@ -30,7 +30,7 @@ requirements:
   run:
     - grayskull >=2.9.2
     - packaging >=25.0
-    - py-rattler >=0.23.2
+    - py-rattler >=0.23.2,<0.24.0a0
     - python >=${{ python_min }}
     - python-build >=1.0.0
     - requests >=2.32.5
